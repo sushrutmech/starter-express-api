@@ -27,6 +27,7 @@ app.use(express.urlencoded({ extended: true }))
 app.use(express.json())
 app.use(cors())
 router.get("/", (req, res) => {
+  res.setHeader("Access-Control-Allow-Origin", "https://fuzzy-getup-moth.cyclic.app")
   res.setHeader("Access-Control-Allow-Origin", "*")
   res.setHeader("Access-Control-Allow-Credentials", "true");
   res.setHeader("Access-Control-Max-Age", "1800");
